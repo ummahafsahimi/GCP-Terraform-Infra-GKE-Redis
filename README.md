@@ -54,23 +54,23 @@ Private service access
 
 //bash
 
-### Working directory
+#### Working directory
 //mkdir terraform         
 
-### Move into it
+#### Move into it
 //cd terraform            
 
-### Clone Repo
+#### Clone the Repo
 //git clone <repo-url>    
 
-### Create variable file
+#### Create variable file
 //touch terraform.tfvars   
 
-### Initialize Terraform
+#### Initialize Terraform
 //terraform init          
 
-### Review plan
+#### Review plan
 //terraform plan  
 
-### Provision resources
+#### Provision resources
 //terraform apply          
