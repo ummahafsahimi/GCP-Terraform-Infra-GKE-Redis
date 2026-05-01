@@ -1,9 +1,20 @@
-# GCP Infrastructure Provisioning with Terraform
-VPC · Subnets · IAM · Workload Identity · GKE · Redis · Artifact Registry
+# GCP Infrastructure Provisioning with Terraform for an MS application
+    VPC · Subnets · IAM · Workload Identity · GKE · Redis · Artifact Registry
 
 This repository contains the full Terraform configuration I built as part of my self‑learning journey to design and provision a complete GCP infrastructure stack for a microservices application.
 
 I have previously done similar work in AWS, and this project helped me explore how GCP approaches cloud identity, networking, and Kubernetes differently.
+
+## Key Takeways
+While troubleshooting, I faced multiple challenges and spent hours looking in the wrong place. Some of the key takeaways:
+
+    Cloud infrastructure provisioning is never just a Terraform problem
+
+    The GKE operations log, not terraform apply, is where the real errors are
+
+    Regional clusters silently multiply your nodes — always verify with gcloud compute instances list
+
+    IAM and networking issues look identical from Terraform's output — check both before assuming either
 
 ## What This Project Provisions
 
@@ -50,27 +61,25 @@ Standard tier Redis instance
 
 Private service access
 
-## How to Use This Repo
-
-//bash
+## How to Use This Repo          //bash
 
 #### Working directory
-//mkdir terraform         
+    mkdir terraform         
 
 #### Move into it
-//cd terraform            
+    cd terraform            
 
 #### Clone the Repo
-//git clone <repo-url>    
+    git clone <repo-url>    
 
 #### Create variable file
-//touch terraform.tfvars   
+    touch terraform.tfvars   
 
 #### Initialize Terraform
-//terraform init          
+    terraform init          
 
 #### Review plan
-//terraform plan  
+    terraform plan  
 
 #### Provision resources
-//terraform apply          
+    terraform apply          
